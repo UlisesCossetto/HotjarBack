@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "rUBaXvKFSRFKr0kIg4fwLOGk6FcWyjuns49o25nrsxM=",
+  "Source": "Hotjar.Api",
+  "BasePath": "_content/Hotjar.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

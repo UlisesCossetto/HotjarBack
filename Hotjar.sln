@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{291C4A50-6F1B-4CA3-9117-64EFC67C3076}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{ED78508C-A279-4D33-AD8E-8D61A48E69D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{7401AD6C-F0D0-45C3-BA83-457099CEC849}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{D333C778-B1C9-4DD3-A2DD-99B0B5D7EF70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotjar.Api", "src\Hotjar.Api\Hotjar.Api.csproj", "{3940AEC1-753F-4726-9E8E-B9CC147732B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotjar.Core", "src\Hotjar.Core\Hotjar.Core.csproj", "{90377C76-CF4D-42B5-B546-AD93EF45F29B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotjar.Infrastructure", "Hotjar.Infrastructure\Hotjar.Infrastructure.csproj", "{2E324876-F508-481A-AAB5-B6C59418E0DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3940AEC1-753F-4726-9E8E-B9CC147732B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3940AEC1-753F-4726-9E8E-B9CC147732B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3940AEC1-753F-4726-9E8E-B9CC147732B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3940AEC1-753F-4726-9E8E-B9CC147732B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90377C76-CF4D-42B5-B546-AD93EF45F29B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90377C76-CF4D-42B5-B546-AD93EF45F29B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90377C76-CF4D-42B5-B546-AD93EF45F29B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90377C76-CF4D-42B5-B546-AD93EF45F29B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E324876-F508-481A-AAB5-B6C59418E0DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E324876-F508-481A-AAB5-B6C59418E0DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E324876-F508-481A-AAB5-B6C59418E0DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E324876-F508-481A-AAB5-B6C59418E0DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ED78508C-A279-4D33-AD8E-8D61A48E69D2} = {291C4A50-6F1B-4CA3-9117-64EFC67C3076}
+		{7401AD6C-F0D0-45C3-BA83-457099CEC849} = {291C4A50-6F1B-4CA3-9117-64EFC67C3076}
+		{D333C778-B1C9-4DD3-A2DD-99B0B5D7EF70} = {291C4A50-6F1B-4CA3-9117-64EFC67C3076}
+		{3940AEC1-753F-4726-9E8E-B9CC147732B0} = {ED78508C-A279-4D33-AD8E-8D61A48E69D2}
+		{90377C76-CF4D-42B5-B546-AD93EF45F29B} = {7401AD6C-F0D0-45C3-BA83-457099CEC849}
+		{2E324876-F508-481A-AAB5-B6C59418E0DC} = {D333C778-B1C9-4DD3-A2DD-99B0B5D7EF70}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BCA2BEDE-7F08-49F8-A0F3-026B34BF4204}
+	EndGlobalSection
+EndGlobal
