@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 using System;
 using System.Globalization;
 using System.Reflection;
@@ -43,6 +44,7 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddDbContextsMariaDB(Configuration);
 
+builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddServices();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAuthentication(Configuration);
@@ -62,10 +64,7 @@ app.UseRouting();
 app.UseCors(_policyName);
 
 app.UseSwagger();
-app.UseSwaggerUI(options =>
-{
-    options.SwaggerEndpoint("/swagger/index.html", "Hotjar Api");
-});
+app.UseSwaggerUI();
 
 app.UseAuthentication();
 
