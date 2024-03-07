@@ -4397,23 +4397,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ulico\\.nuget\\packages\\": {},
+    "C:\\Users\\ulises.cosetto_cedei\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ulico\\HotjarProyectoBack\\Hotjar\\src\\Hotjar.Core\\Hotjar.Core.csproj",
+      "projectUniqueName": "C:\\Users\\ulises.cosetto_cedei\\HotjarProyectoBack\\Hotjar\\src\\Hotjar.Core\\Hotjar.Core.csproj",
       "projectName": "Hotjar.Core",
-      "projectPath": "C:\\Users\\ulico\\HotjarProyectoBack\\Hotjar\\src\\Hotjar.Core\\Hotjar.Core.csproj",
-      "packagesPath": "C:\\Users\\ulico\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ulico\\HotjarProyectoBack\\Hotjar\\src\\Hotjar.Core\\obj\\",
+      "projectPath": "C:\\Users\\ulises.cosetto_cedei\\HotjarProyectoBack\\Hotjar\\src\\Hotjar.Core\\Hotjar.Core.csproj",
+      "packagesPath": "C:\\Users\\ulises.cosetto_cedei\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ulises.cosetto_cedei\\HotjarProyectoBack\\Hotjar\\src\\Hotjar.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ulico\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ulises.cosetto_cedei\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

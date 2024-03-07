@@ -9,8 +9,9 @@
     }
   },
   "profiles": {
-    "Local": {
+    "http": {
       "commandName": "Project",
+      "dotnetRunMessages": true,
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Local"

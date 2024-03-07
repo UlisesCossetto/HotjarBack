@@ -13,6 +13,7 @@ namespace Hotjar.Core.Entidades
         {
             Books = new HashSet<Book>();
         }
+        public string UserName { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }
         public DateTime CreationDate { get; set; }

@@ -10,3 +10,15 @@ C:\Users\ulico\HotjarProyectoBack\Hotjar\src\Hotjar.Core\obj\Debug\net7.0\Hotjar
 C:\Users\ulico\HotjarProyectoBack\Hotjar\src\Hotjar.Core\obj\Debug\net7.0\refint\Hotjar.Core.dll
 C:\Users\ulico\HotjarProyectoBack\Hotjar\src\Hotjar.Core\obj\Debug\net7.0\Hotjar.Core.pdb
 C:\Users\ulico\HotjarProyectoBack\Hotjar\src\Hotjar.Core\obj\Debug\net7.0\ref\Hotjar.Core.dll
+C:\Users\ulises.cosetto_cedei\HotjarProyectoBack\Hotjar\src\Hotjar.Core\bin\Debug\net7.0\Hotjar.Core.deps.json
+C:\Users\ulises.cosetto_cedei\HotjarProyectoBack\Hotjar\src\Hotjar.Core\bin\Debug\net7.0\Hotjar.Core.dll
+C:\Users\ulises.cosetto_cedei\HotjarProyectoBack\Hotjar\src\Hotjar.Core\bin\Debug\net7.0\Hotjar.Core.pdb
+C:\Users\ulises.cosetto_cedei\HotjarProyectoBack\Hotjar\src\Hotjar.Core\obj\Debug\net7.0\Hotjar.Core.csproj.AssemblyReference.cache
+C:\Users\ulises.cosetto_cedei\HotjarProyectoBack\Hotjar\src\Hotjar.Core\obj\Debug\net7.0\Hotjar.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ulises.cosetto_cedei\HotjarProyectoBack\Hotjar\src\Hotjar.Core\obj\Debug\net7.0\Hotjar.Core.AssemblyInfoInputs.cache
+C:\Users\ulises.cosetto_cedei\HotjarProyectoBack\Hotjar\src\Hotjar.Core\obj\Debug\net7.0\Hotjar.Core.AssemblyInfo.cs
+C:\Users\ulises.cosetto_cedei\HotjarProyectoBack\Hotjar\src\Hotjar.Core\obj\Debug\net7.0\Hotjar.Core.csproj.CoreCompileInputs.cache
+C:\Users\ulises.cosetto_cedei\HotjarProyectoBack\Hotjar\src\Hotjar.Core\obj\Debug\net7.0\Hotjar.Core.dll
+C:\Users\ulises.cosetto_cedei\HotjarProyectoBack\Hotjar\src\Hotjar.Core\obj\Debug\net7.0\refint\Hotjar.Core.dll
+C:\Users\ulises.cosetto_cedei\HotjarProyectoBack\Hotjar\src\Hotjar.Core\obj\Debug\net7.0\Hotjar.Core.pdb
+C:\Users\ulises.cosetto_cedei\HotjarProyectoBack\Hotjar\src\Hotjar.Core\obj\Debug\net7.0\ref\Hotjar.Core.dll

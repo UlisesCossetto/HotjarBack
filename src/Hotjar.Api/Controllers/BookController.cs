@@ -1,4 +1,5 @@
 ﻿using Hotjar.Api.Controllers.Base;
+using Hotjar.Infrastructure.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 

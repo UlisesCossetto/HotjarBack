@@ -64,7 +64,7 @@ app.UseCors(_policyName);
 app.UseSwagger();
 app.UseSwaggerUI(options =>
 {
-    options.SwaggerEndpoint("/swagger/v1/swagger.json", "Hotjar Api");
+    options.SwaggerEndpoint("/swagger/index.html", "Hotjar Api");
 });
 
 app.UseAuthentication();

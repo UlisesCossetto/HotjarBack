@@ -36,8 +36,10 @@ namespace Hotjar.Infrastructure.Extensions
         public static IServiceCollection AddServices(this IServiceCollection services)
         {
             services.AddScoped<IUserServices, UserServices>();
+            services.AddScoped<IBookServices, BookServices>();
 
             services.AddScoped<IUserManager, UserManager>();
+            services.AddScoped<IBookManager, BookManager>();
 
             services.AddScoped<IUserRepository, UserRepository>();
 

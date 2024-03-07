@@ -3,6 +3,7 @@ using System;
 using Hotjar.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hotjar.Infrastructure.Migrations
 {
     [DbContext(typeof(HotjarDbContext))]
-    partial class HotjarDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240307195938_ADD_COLUMN_TABLE_Users_COLUMN_UserName")]
+    partial class ADD_COLUMN_TABLE_Users_COLUMN_UserName
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

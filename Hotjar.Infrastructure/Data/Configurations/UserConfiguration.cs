@@ -18,6 +18,9 @@ namespace Hotjar.Infrastructure.Data.Configurations
 
             builder.HasKey(e => e.Id);
 
+            builder.HasIndex(u => u.UserName)
+               .IsUnique(true);
+
             builder.Property(e => e.Name)
                 .IsRequired()
                 .HasMaxLength(30)
