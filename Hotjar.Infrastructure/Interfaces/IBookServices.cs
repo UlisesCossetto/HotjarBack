@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hotjar.Core.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,6 @@ namespace Hotjar.Infrastructure.Interfaces
 {
     public interface IBookServices
     {
-
+        public Task<IEnumerable<Book>> GetBooks();
     }
 }

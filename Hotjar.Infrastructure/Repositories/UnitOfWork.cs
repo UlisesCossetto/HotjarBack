@@ -14,10 +14,12 @@ namespace Hotjar.Infrastructure.Repositories
     {
         private readonly HotjarDbContext _context;
         private readonly IUserRepository _userRepository;
+        private readonly IBookRepository _bookRepository;
         public UnitOfWork(HotjarDbContext context)
         {
             _context = context;
         }
+        public IBookRepository BookRepository => _bookRepository ?? new BookRepository(_context);
         public IUserRepository UserRepository => _userRepository ?? new UserRepository(_context);
         public void Dispose()
         {

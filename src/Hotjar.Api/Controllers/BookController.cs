@@ -1,4 +1,5 @@
 ﻿using Hotjar.Api.Controllers.Base;
+using Hotjar.Core.Entities;
 using Hotjar.Infrastructure.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
@@ -14,17 +15,17 @@ namespace Hotjar.Api.Controllers
         }
 
         /// <summary>
-        /// Obtiene articulos por filtros
+        /// Obtiene todos los articulos
         /// </summary>
         /// <param name="registerData">Filters to apply</param>
         /// <returns></returns>
-        [HttpPost]
-        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [HttpGet]
+        [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(IEnumerable<Book>))]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> BuyBook(int registerData)
+        public async Task<IActionResult> BuyBook()
         {
-
-            return Ok();
+            var resp = await _bookServices.GetBooks();
+            return Ok(resp);
         }
     }
 }
