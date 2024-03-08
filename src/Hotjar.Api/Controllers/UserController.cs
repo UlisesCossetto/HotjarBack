@@ -31,26 +31,26 @@ namespace Hotjar.Api.Controllers
         /// </summary>
         /// <param name="registerData">Filters to apply</param>
         /// <returns></returns>
-        [HttpPost]
-        [ProducesResponseType((int)HttpStatusCode.OK)]
-        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> Login(int registerData)
-        {
+        //[HttpPost]
+        //[ProducesResponseType((int)HttpStatusCode.OK)]
+        //[ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        //public async Task<IActionResult> Login(int registerData)
+        //{
 
-            return Ok();
-        }
-        /// <summary>
-        /// Obtiene articulos por filtros
-        /// </summary>
-        /// <param name="registerData">Filters to apply</param>
-        /// <returns></returns>
-        [HttpPost]
-        [ProducesResponseType((int)HttpStatusCode.OK)]
-        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> Refresh(int registerData)
-        {
+        //    return Ok();
+        //}
+        ///// <summary>
+        ///// Obtiene articulos por filtros
+        ///// </summary>
+        ///// <param name="registerData">Filters to apply</param>
+        ///// <returns></returns>
+        //[HttpPost]
+        //[ProducesResponseType((int)HttpStatusCode.OK)]
+        //[ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        //public async Task<IActionResult> Refresh(int registerData)
+        //{
 
-            return Ok();
-        }
+        //    return Ok();
+        //}
     }
 }

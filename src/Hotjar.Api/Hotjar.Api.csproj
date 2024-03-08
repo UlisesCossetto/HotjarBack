@@ -13,6 +13,14 @@
     </PackageReference>
   </ItemGroup>
 
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DocumentationFile>bin\Debug\net7.0\Hotjar.Api.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<DocumentationFile>\Hotjar.Api.xml</DocumentationFile>
+	</PropertyGroup>
+	
   <ItemGroup>
     <ProjectReference Include="..\..\Hotjar.Infrastructure\Hotjar.Infrastructure.csproj" />
   </ItemGroup>

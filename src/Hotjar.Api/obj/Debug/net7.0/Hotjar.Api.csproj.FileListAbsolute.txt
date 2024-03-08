@@ -204,3 +204,4 @@ C:\Users\ulises.cosetto_cedei\HotjarProyectoBack\Hotjar\src\Hotjar.Api\obj\Debug
 C:\Users\ulises.cosetto_cedei\HotjarProyectoBack\Hotjar\src\Hotjar.Api\obj\Debug\net7.0\Hotjar.Api.pdb
 C:\Users\ulises.cosetto_cedei\HotjarProyectoBack\Hotjar\src\Hotjar.Api\obj\Debug\net7.0\Hotjar.Api.genruntimeconfig.cache
 C:\Users\ulises.cosetto_cedei\HotjarProyectoBack\Hotjar\src\Hotjar.Api\obj\Debug\net7.0\ref\Hotjar.Api.dll
+C:\Users\ulises.cosetto_cedei\HotjarProyectoBack\Hotjar\src\Hotjar.Api\bin\Debug\net7.0\Hotjar.Api.xml

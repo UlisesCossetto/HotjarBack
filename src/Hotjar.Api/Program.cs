@@ -39,14 +39,14 @@ builder.Services.AddCors(x =>
 });
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-//builder.Services.AddCustomControllers();
-//builder.Services.AddOptions(Configuration);
-
+builder.Services.AddControllers();
+builder.Services.AddMvc();
 builder.Services.AddDbContextsMariaDB(Configuration);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddServices();
-builder.Services.AddSwaggerGen();
+
+builder.Services.AddSwagger($"{Assembly.GetExecutingAssembly().GetName().Name}.xml");
 builder.Services.AddAuthentication(Configuration);
 
 var app = builder.Build();
@@ -59,18 +59,17 @@ void ApplyMigrations()
 // Configure the HTTP request pipeline.
 app.UseHttpsRedirection();
 
+app.UseSwaggerDocumentation();
+
 app.UseRouting();
 
 app.UseCors(_policyName);
-
-app.UseSwagger();
-app.UseSwaggerUI();
 
 app.UseAuthentication();
 
 app.UseAuthorization();
 
-//app.MapControllers();
+app.MapControllers();
 ApplyMigrations();
 
 app.Run();

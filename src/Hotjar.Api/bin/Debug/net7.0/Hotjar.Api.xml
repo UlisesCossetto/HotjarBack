@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Hotjar.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Hotjar.Api.Controllers.BookController.BuyBook">
+            <summary>
+            Obtiene todos los articulos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hotjar.Api.Controllers.UserController.Register(System.Int32)">
+            <summary>
+            Obtiene articulos por filtros
+            </summary>
+            <param name="registerData">Filters to apply</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
