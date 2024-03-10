@@ -97,27 +97,24 @@ namespace Hotjar.Infrastructure.Migrations
 
             modelBuilder.Entity("Hotjar.Core.Entities.BooksPerUsers", b =>
                 {
-                    b.Property<int>("BooksId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserId")
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     b.Property<int>("BookId")
                         .HasColumnType("int");
 
-                    b.Property<int>("BookId1")
+                    b.Property<int>("UserId")
                         .HasColumnType("int");
 
-                    b.HasKey("BooksId", "UserId");
-
-                    b.HasIndex("BookId");
-
-                    b.HasIndex("BookId1");
+                    b.HasKey("Id");
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("BooksPerUsers");
+                    b.HasIndex(new[] { "BookId", "UserId" }, "IX_BooksPerUsers_Unique_Compuesto")
+                        .IsUnique();
+
+                    b.ToTable("BooksPerUsers", (string)null);
                 });
 
             modelBuilder.Entity("Hotjar.Core.Entities.EnjoymentForm", b =>
@@ -151,18 +148,6 @@ namespace Hotjar.Infrastructure.Migrations
                     b.HasOne("Hotjar.Core.Entities.Book", "Book")
                         .WithMany()
                         .HasForeignKey("BookId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Hotjar.Core.Entities.Book", null)
-                        .WithMany()
-                        .HasForeignKey("BookId1")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Hotjar.Core.Entities.Book", null)
-                        .WithMany()
-                        .HasForeignKey("BooksId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

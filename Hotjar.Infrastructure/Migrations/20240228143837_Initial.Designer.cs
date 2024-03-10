@@ -91,31 +91,6 @@ namespace Hotjar.Infrastructure.Migrations
                     b.ToTable("Book", (string)null);
                 });
 
-            modelBuilder.Entity("Hotjar.Core.Entities.BooksPerUsers", b =>
-                {
-                    b.Property<int>("BooksId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("BookId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("BookId1")
-                        .HasColumnType("int");
-
-                    b.HasKey("BooksId", "UserId");
-
-                    b.HasIndex("BookId");
-
-                    b.HasIndex("BookId1");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("BooksPerUsers");
-                });
-
             modelBuilder.Entity("Hotjar.Core.Entities.EnjoymentForm", b =>
                 {
                     b.Property<int>("Id")
@@ -140,37 +115,6 @@ namespace Hotjar.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("EnjoymentForm", (string)null);
-                });
-
-            modelBuilder.Entity("Hotjar.Core.Entities.BooksPerUsers", b =>
-                {
-                    b.HasOne("Hotjar.Core.Entities.Book", "Book")
-                        .WithMany()
-                        .HasForeignKey("BookId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Hotjar.Core.Entities.Book", null)
-                        .WithMany()
-                        .HasForeignKey("BookId1")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Hotjar.Core.Entities.Book", null)
-                        .WithMany()
-                        .HasForeignKey("BooksId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Hotjar.Core.Entidades.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Book");
-
-                    b.Navigation("User");
                 });
 #pragma warning restore 612, 618
         }

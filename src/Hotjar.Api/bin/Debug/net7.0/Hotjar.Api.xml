@@ -4,9 +4,21 @@
         <name>Hotjar.Api</name>
     </assembly>
     <members>
-        <member name="M:Hotjar.Api.Controllers.BookController.BuyBook">
+        <member name="M:Hotjar.Api.Controllers.BookController.GetBooks">
             <summary>
-            Obtiene todos los articulos
+            Obtiene todos los Libros
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hotjar.Api.Controllers.BookController.BuyBook(Hotjar.Infrastructure.Dtos.Book.BuyBookRequestDto)">
+            <summary>
+            Realizar la compra del libro
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hotjar.Api.Controllers.BookController.GetOwnBooks(System.Int32)">
+            <summary>
+            Realizar la compra del libro
             </summary>
             <returns></returns>
         </member>

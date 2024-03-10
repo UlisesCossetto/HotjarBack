@@ -75,68 +75,11 @@ namespace Hotjar.Infrastructure.Migrations
                     table.PrimaryKey("PK_User", x => x.Id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
-
-            migrationBuilder.CreateTable(
-                name: "BooksPerUsers",
-                columns: table => new
-                {
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    BooksId = table.Column<int>(type: "int", nullable: false),
-                    BookId = table.Column<int>(type: "int", nullable: false),
-                    BookId1 = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_BooksPerUsers", x => new { x.BooksId, x.UserId });
-                    table.ForeignKey(
-                        name: "FK_BooksPerUsers_Book_BookId",
-                        column: x => x.BookId,
-                        principalTable: "Book",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_BooksPerUsers_Book_BookId1",
-                        column: x => x.BookId1,
-                        principalTable: "Book",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_BooksPerUsers_Book_BooksId",
-                        column: x => x.BooksId,
-                        principalTable: "Book",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_BooksPerUsers_User_UserId",
-                        column: x => x.UserId,
-                        principalTable: "User",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BooksPerUsers_BookId",
-                table: "BooksPerUsers",
-                column: "BookId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BooksPerUsers_BookId1",
-                table: "BooksPerUsers",
-                column: "BookId1");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BooksPerUsers_UserId",
-                table: "BooksPerUsers",
-                column: "UserId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "BooksPerUsers");
-
             migrationBuilder.DropTable(
                 name: "EnjoymentForm");
 

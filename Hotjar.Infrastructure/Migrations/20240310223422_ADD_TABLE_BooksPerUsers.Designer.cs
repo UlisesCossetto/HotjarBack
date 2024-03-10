@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hotjar.Infrastructure.Migrations
 {
     [DbContext(typeof(HotjarDbContext))]
-    [Migration("20240228144824_BOOKS_INITIAL_INSERTION")]
-    partial class BOOKS_INITIAL_INSERTION
+    [Migration("20240310223422_ADD_TABLE_BooksPerUsers")]
+    partial class ADD_TABLE_BooksPerUsers
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -51,7 +51,14 @@ namespace Hotjar.Infrastructure.Migrations
                         .HasMaxLength(150)
                         .HasColumnType("varchar(150)");
 
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UserName")
+                        .IsUnique();
 
                     b.ToTable("User", (string)null);
                 });
@@ -91,6 +98,28 @@ namespace Hotjar.Infrastructure.Migrations
                     b.ToTable("Book", (string)null);
                 });
 
+            modelBuilder.Entity("Hotjar.Core.Entities.BooksPerUsers", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("BookId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.HasIndex(new[] { "BookId", "UserId" }, "IX_BooksPerUsers_Unique_Compuesto")
+                        .IsUnique();
+
+                    b.ToTable("BooksPerUsers", (string)null);
+                });
+
             modelBuilder.Entity("Hotjar.Core.Entities.EnjoymentForm", b =>
                 {
                     b.Property<int>("Id")
@@ -117,6 +146,24 @@ namespace Hotjar.Infrastructure.Migrations
                     b.ToTable("EnjoymentForm", (string)null);
                 });
 
+            modelBuilder.Entity("Hotjar.Core.Entities.BooksPerUsers", b =>
+                {
+                    b.HasOne("Hotjar.Core.Entities.Book", "Book")
+                        .WithMany()
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Hotjar.Core.Entidades.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Book");
+
+                    b.Navigation("User");
+                });
 #pragma warning restore 612, 618
         }
     }

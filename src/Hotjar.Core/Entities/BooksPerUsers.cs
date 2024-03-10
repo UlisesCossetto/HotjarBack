@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Hotjar.Core.Entities
 {
-    public class BooksPerUsers
+    public class BooksPerUsers : EntidadBase
     {
         public int BookId { get; set; }
         public int UserId { get; set; }

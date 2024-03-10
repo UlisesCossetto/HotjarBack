@@ -44,9 +44,11 @@ namespace Hotjar.Infrastructure.Extensions
 
             services.AddScoped<IUserManager, UserManager>();
             services.AddScoped<IBookManager, BookManager>();
+            services.AddScoped<IBooksPerUsersManager, BooksPerUsersManager>();
 
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IBookRepository, BookRepository>();
+            services.AddScoped<IBooksPerUsersRepository, BooksPerUsersRepository>();
 
             return services;
         }

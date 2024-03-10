@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hotjar.Infrastructure.Migrations
 {
     [DbContext(typeof(HotjarDbContext))]
-    [Migration("20240228144824_BOOKS_INITIAL_INSERTION")]
-    partial class BOOKS_INITIAL_INSERTION
+    [Migration("20240308182248_UsersHardcoded")]
+    partial class UsersHardcoded
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -51,7 +51,14 @@ namespace Hotjar.Infrastructure.Migrations
                         .HasMaxLength(150)
                         .HasColumnType("varchar(150)");
 
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UserName")
+                        .IsUnique();
 
                     b.ToTable("User", (string)null);
                 });
@@ -116,7 +123,6 @@ namespace Hotjar.Infrastructure.Migrations
 
                     b.ToTable("EnjoymentForm", (string)null);
                 });
-
 #pragma warning restore 612, 618
         }
     }

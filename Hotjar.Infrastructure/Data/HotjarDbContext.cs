@@ -17,6 +17,7 @@ public partial class HotjarDbContext : DbContext
     {
     }
     public virtual DbSet<User> Users { get; set; }
+    public virtual DbSet<BooksPerUsers> BooksPerUsers { get; set; }
     public virtual DbSet<EnjoymentForm> EnjoymentForms { get; set; }
     public virtual DbSet<Book> Books { get; set; }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

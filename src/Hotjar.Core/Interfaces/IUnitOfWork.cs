@@ -1,4 +1,5 @@
-﻿using Hotjar.Core.Interfaces.Repositories;
+﻿using Hotjar.Core.Interfaces.Managers;
+using Hotjar.Core.Interfaces.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,8 @@ namespace Hotjar.Core.Interfaces
     {
         IUserRepository UserRepository { get; }
         IBookRepository BookRepository { get; }
+        IBooksPerUsersRepository BooksPerUsersRepository { get; }
+        Task SaveAsync();
+        void Save();
     }
 }

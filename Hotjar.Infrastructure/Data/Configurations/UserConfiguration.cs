@@ -40,7 +40,8 @@ namespace Hotjar.Infrastructure.Data.Configurations
                 .UsingEntity<BooksPerUsers>(
                 x => x.HasOne(x => x.Book)
                 .WithMany()
-                .HasForeignKey(x => x.BookId));
+                .HasForeignKey(x => x.BookId)
+            );
         }
     }
 }
