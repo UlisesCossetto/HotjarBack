@@ -26,8 +26,8 @@ namespace Hotjar.Infrastructure.Services
         }
         public async Task BuyBook(BuyBookRequestDto buyBookRequestDto)
         {
-            try
-            {
+            var resp = await _booksPerUsersManager.FindRelation(buyBookRequestDto.UserId, buyBookRequestDto.BookId);
+            if (resp) throw new Exception();
                 BooksPerUsers booksPerUsers = new()
                 {
                     BookId = buyBookRequestDto.BookId,
@@ -37,7 +37,6 @@ namespace Hotjar.Infrastructure.Services
                 await _booksPerUsersManager.AddBookPerUser(booksPerUsers);
 
                 return;
-            } catch (Exception ex) { }
         }
 
         public async Task<IEnumerable<Book>> GetOwnBooks(int id)

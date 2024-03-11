@@ -20,5 +20,10 @@ namespace Hotjar.Infrastructure.Repositories
         {
             return await _entities.Where(x => x.UserId == idUser).Include(x => x.Book).ToListAsync();
         }
+        public async Task<bool> FindRelation(int idUser, int idBook)
+        {
+            var resp = await _entities.Where(x => x.UserId == idUser && x.BookId == idBook).FirstOrDefaultAsync();
+            return resp != null;
+        }
     }
 }

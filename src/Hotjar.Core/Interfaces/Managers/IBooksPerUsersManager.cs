@@ -11,5 +11,6 @@ namespace Hotjar.Core.Interfaces.Managers
     {
         public Task AddBookPerUser(BooksPerUsers booksPerUsers);
         public Task<IEnumerable<BooksPerUsers>> GetBooksPerUserByIdUser(int idUser);
+        public Task<bool> FindRelation(int idUser, int idBook);
     }
 }

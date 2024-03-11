@@ -10,5 +10,6 @@ namespace Hotjar.Core.Interfaces.Repositories
     public interface IBooksPerUsersRepository : IRepository<BooksPerUsers>
     {
         public Task<IEnumerable<BooksPerUsers>> GetBooksPerUserByIdUser(int idUser);
+        public Task<bool> FindRelation(int idUser, int idBook);
     }
 }

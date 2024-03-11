@@ -29,5 +29,9 @@ namespace Hotjar.Core.Managers
         {
             return await _unitOfWork.BooksPerUsersRepository.GetBooksPerUserByIdUser(idUser);
         }
+        public async Task<bool> FindRelation(int idUser, int idBook)
+        {
+            return await _unitOfWork.BooksPerUsersRepository.FindRelation(idUser, idBook);
+        }
     }
 }
